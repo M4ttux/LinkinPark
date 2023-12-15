@@ -1,0 +1,663 @@
+/* Definición de fuentes personalizadas */
+
+@font-face {
+    font-family: 'LinkinPark';
+    src: url('../fonts/squealer-webfont.eot');
+    src: url('../fonts/squealer-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/squealer-webfont.woff2') format('woff2'),
+         url('../fonts/squealer-webfont.woff') format('woff'),
+         url('../fonts/squealer-webfont.ttf') format('truetype'),
+         url('../fonts/squealer-webfont.svg#squealerregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inno';
+    src: url('../fonts/inno-webfont.eot');
+    src: url('../fonts/inno-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/inno-webfont.woff2') format('woff2'),
+         url('../fonts/inno-webfont.woff') format('woff'),
+         url('../fonts/inno-webfont.ttf') format('truetype'),
+         url('../fonts/inno-webfont.svg#mbf_innoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilos generales para Desktop*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+    background-image: url(../img/LinkinPark-Concierto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);      
+}
+
+/* Menú de navegación  */
+
+nav {
+    background-color: #222222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    background-image: url('../icons/logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 75px;
+    height: 75px;
+    margin: 10px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 10px;
+    list-style-type: none;
+    text-align: right;
+}
+
+nav ul li, .second-row ul li {
+    display: inline-block;
+    margin-left: 10px;
+    transition: transform 0.2s;
+        transition: -webkit-transform 0.2s;
+            transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+nav ul li a, .second-row ul li a {
+    display: block;
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav .icono {
+    display: none;
+}
+
+.active {
+    color: #ff0000;
+}
+
+.second-row {
+    background-color: #555555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-row ul {
+    margin: 0;
+    padding: 10px;
+    list-style-type: none;
+    text-align: center;
+}
+
+@media (hover:hover) {
+    nav ul li:hover, .second-row ul li:hover {
+        transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+                -ms-transform: scale(1.2);      
+    }
+}
+
+/* Contenido principal */
+
+main {
+    max-width: 1300px;
+    margin: auto;
+    background-color: rgba(26, 26, 26, 0.9);
+    padding: 30px;
+    font-size: 18px;
+}
+
+/* Titulo principal */
+
+h1 {
+    font-size: 80px;
+    font-family: 'LinkinPark';
+    text-align: center;
+    margin: 30px auto;
+    letter-spacing: 0.4em;
+}
+
+/* Contenedor de género musical */
+
+.genre-container {
+    text-align: center;
+    margin: -30px 0 0;
+    padding-bottom: 30px;
+    font-family: 'Inno', sans-serif;
+    color: #ffffff;
+}
+
+/* Géneros musicales */
+
+.genre {
+    display: inline;
+    margin: 0 50px;
+}
+
+/* Imágen de inicio */
+
+#imagen-inicio {
+    width: 100%;
+    height: auto;
+}
+
+.banda img {
+    width: 100%;
+    border-radius: 50px;
+}
+
+/* Títulos secundarios */
+
+h2 {
+    font-size: 50px;
+    font-family: 'LinkinPark';
+    text-align: center;
+    margin: 20px auto;
+    letter-spacing: 0.4em;
+}
+
+/* Imágenes de Historia | Miembros | EX Miembros */
+
+.galeria {
+    text-align: center;
+}
+
+.imagenes {
+    max-width: 1000px;
+    display: inline-block;
+    text-align: center;
+}
+
+.imagenes img {
+    border-radius: 20%;
+}
+
+.integrantes {
+    max-width: 800px;
+    display: inline-block;
+    text-align: center;
+}
+
+.ex-integrantes {
+    max-width: 1200px;
+    display: inline-block;
+    text-align: center;
+}
+
+.integrantes img, .ex-integrantes img {
+    border-radius: 50%;
+}
+
+.imagenes ul, .integrantes ul, .ex-integrantes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.imagenes ul li, .integrantes ul li, .ex-integrantes ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.imagenes img, .integrantes img, .ex-integrantes img {
+    transition: transform 0.2s;
+        transition: -webkit-transform 0.2s;
+            transition: transform 0.2s, -webkit-transform 0.2s;
+}
+@media (hover:hover) {
+    .imagenes img:hover, .integrantes img:hover, .ex-integrantes img:hover {
+        transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+                -ms-transform: scale(1.1);     
+    }
+}
+
+/* Sección de video */
+
+.video-container {
+    width: 100%;
+    height: 500px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Footer */
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #222222;
+    width: 100%;
+    margin: auto;
+}
+
+/* Grilla en el footer */
+
+.footer-container {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#footer-redes ul{
+    list-style: none;
+    padding: 0;
+}
+
+#footer-redes ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#footer-redes li a{
+    display: inline-block;
+	background: url(../icons/css_sprites.png);
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    font-size:0px;
+    background-position: -10px -10px;
+    transition: transform 0.2s;
+        transition: -webkit-transform 0.2s;
+            transition: transform 0.2s, -webkit-transform 0.2s;
+    vertical-align: middle;
+}
+
+@media (hover:hover) {
+    #footer-redes li a:hover {
+        transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+                -ms-transform: scale(1.2);
+    }
+}
+
+#footer-redes #tw a{
+    background-position: -80px;
+}
+
+#footer-redes #ins a{
+    background-position: -150px;
+}
+
+#footer-redes #yt a{
+    background-position: -220px;
+}
+
+#footer-redes #dz a{
+    background-position: -290px;
+}
+
+#footer-redes #app a{
+    background-position: -360px;
+}
+
+#footer-redes #st a{
+    background-position: -430px;
+}
+
+.informacion ul{
+    list-style: none;
+    padding: 0;
+}
+
+.informacion, .alumno {
+    margin: 20px auto;
+}
+
+.alumno li, .contenedor li {
+    margin: 10px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Sección "álbum" */
+
+.album {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.album img {
+    border-radius: 5px;
+    object-fit: cover;
+        -o-object-fit: cover;
+}
+
+.album h2 {
+    font-size: 36px;
+    font-family: 'Linkinpark', sans-serif;
+    margin: 20px 0;
+}
+
+.album p {
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Secciones de canciones */
+
+.canciones {
+    display: none;
+}
+
+.canciones.mostrar {
+    display: block;
+}
+
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+ol li {
+    margin: 20px auto;
+}
+
+/* Botón Mostrar/Ocultar Canciones */
+
+.mostrar-canciones {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #555555;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+        transition: background-color 0.2s, -webkit-transform 0.2s;
+            transition: background-color 0.2s, transform 0.2s, -webkit-transform 0.2s;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+@media (hover:hover) {
+    .mostrar-canciones:hover {
+        background-color: #444444;
+        transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+                -ms-transform: scale(1.2);        
+    }
+}
+
+/* Formulario */
+
+.form-contenedor {
+    background-color: #222222;
+    padding: 20px;
+    width: 600px;
+    margin: auto;
+    border-radius: 50px;
+}
+
+.form-contenedor form {
+    margin: auto;
+}
+
+.form-contenedor div {
+    margin: 20px 0px;
+}
+
+.generos input {
+    margin: 0px 15px;
+    margin-top: 15px;
+}
+
+form {
+    width: 500px;
+    padding: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+form label {
+    font-size: 20px;
+    width: 100%;
+    display: inline-block;
+}
+
+.columns {
+    columns: 200px 2;
+        -webkit-columns: 200px 2;
+            -moz-columns: 200px 2;
+}
+
+form ul {
+    list-style: none;
+    padding: 0;
+}
+
+form ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+input[type="checkbox" i] {
+    margin: 10px;
+}
+
+input[type="date" i], input[type="text" i], input[type="email" i], input[type="file" i], select, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    box-sizing: border-box;
+        -webkit-box-sizing: border-box;      
+    resize: none;
+    font-size: 15px;
+}
+
+input[type=submit], input[type=reset], .boton button {
+    display: inline-block;
+    width: 40%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #555555;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+        transition: background-color 0.2s, -webkit-transform 0.2s;
+            transition: background-color 0.2s, transform 0.2s, -webkit-transform 0.2s;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+@media (hover:hover) {
+    input[type=submit]:hover, input[type=reset]:hover, .boton button:hover {
+        background-color: #444444;
+        transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+                -ms-transform: scale(1.2);       
+    }
+}
+
+.botones {
+    text-align: center;
+}
+
+.boton {
+    text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+
+    /*Estilos generales para Mobile 480px*/
+
+    html, .album p {
+        font-size: 14px;
+    }
+
+    /* Menú de navegación  */
+
+    #nav-botones {
+        display: none;
+        background-color: #222222;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-top: 320px;
+    } 
+
+    nav {
+        padding: 10px;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav .icono {
+        display: block;
+        margin-right: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        padding: 20px 0;
+        text-align: center;
+        border-bottom: 1px solid #555;
+        margin: auto;
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    nav ul li a,.second-row ul li a {
+        padding: 5px 15px;
+        margin: 5px 0;
+    }
+
+    .second-row {
+        display: flex;
+    }
+
+    .second-row ul {
+        padding: 5px;
+    }
+
+    .second-row ul li {
+        padding: 0;
+        text-align: center;
+        margin: 2px;
+        background-color: #222222;
+        border-radius: 5px;
+    }
+
+    /* Contenido principal */
+
+    main {
+        font-size: 14px;
+        padding: 15px;
+        max-width: 480px;
+    }
+
+    /* Encabezado principal */
+
+    h1 {
+        font-size: 40px;
+        margin: 0 auto 15px; 
+        letter-spacing: 0.2em;
+    }
+
+    /* Contenedor de género musical */
+
+    .genre-container {
+        margin: -10px 0;
+        padding-bottom: 20px;
+    }
+
+    .genre {
+        margin: 0 10px;
+    }
+
+    /* Títulos secundarios */
+
+    h2, .album h2 {
+        font-size: 34px;
+    }
+
+    /* Imágenes de Historia | Miembros | EX Miembros */
+
+    .banda img, .album img {
+        border-radius: 20px;
+    }
+
+    .integrantes, .ex-integrantes {
+        max-width: 200px;
+    }
+
+    .imagenes ul li, .integrantes ul li, .ex-integrantes ul li {
+        padding: 5px;
+    }
+
+    /* Sección de video */
+
+    .video-container {
+        height: 200px;
+    }
+
+    /* Formulario */
+
+    .form-contenedor {
+        width: 400px;
+    }
+
+    form {
+        width: 300px;
+    }
+
+    input[type=submit], input[type=reset], .boton button {
+        margin: 10px;
+    }
+
+    .columns li {
+        width: 300px;
+    }
+
+    /* Footer */
+
+    footer h2 {
+        margin-bottom: 5px;
+    }
+
+    #footer-redes ul li{
+        margin: 0 5px;
+    }
+}
